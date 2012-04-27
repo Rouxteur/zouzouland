@@ -99,7 +99,7 @@ Socket*	SocketUnix::acceptSocket()
 int		SocketUnix::sendSocket(void* buf, int len)
 {
     int r;
-    if ((r = send(this->sock_, buf, len, NULL)) < 0)
+    if ((r = send(this->sock_, buf, len, 0)) < 0)
     {
         std::cerr << "error send" << std::endl;
     }
@@ -109,7 +109,7 @@ int		SocketUnix::sendSocket(void* buf, int len)
 int		SocketUnix::recvSocket(void* buf, int len)
 {
     int r;
-    if ((r = recv(this->sock_, buf, len, NULL)) < 0)
+    if ((r = recv(this->sock_, buf, len, 0)) < 0)
     {
         std::cerr << "error recv" << std::endl;
     }
