@@ -9,7 +9,7 @@ class UserList
  public:
   UserList();
   ~UserList();
-  bool findUser(const std::string &, const std::string &);
+  User *findUser(const std::string &, const std::string &);
 
  private:
   std::list<User *>	users_;

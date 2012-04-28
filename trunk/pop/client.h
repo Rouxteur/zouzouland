@@ -7,7 +7,8 @@
 #include "response.h"
 #include "request.h"
 #include "Socket/Socket.h"
-
+#include "dirent.h"
+#include <sstream>
 class Server;
 
 
@@ -34,11 +35,12 @@ public:
     void	commandQuit(const std::string &);
     void	commandError();
     bool	getDecoOrder() const;
+    std::string MailsInfo(const std::string &);
 private:
     Server	&server_;
     Socket	*socket_;
     Parser	parser_;
-    User	user_;
+    User	*user_;
     Response	response_;
     Request	&request_;
     bool	writeOrder_;

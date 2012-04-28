@@ -14,6 +14,7 @@ class User
   void			setName(const std::string &);
   const std::string	&getPassword() const;
   void			setPassword(const std::string &);
+
  private:
   std::string		name_;
   std::string		password_;

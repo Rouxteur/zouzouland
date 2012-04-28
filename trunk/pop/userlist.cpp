@@ -19,7 +19,7 @@ UserList::~UserList()
   }
 }
 
-bool	UserList::findUser(const std::string &name, const std::string &password)
+User	*UserList::findUser(const std::string &name, const std::string &password)
 {
   std::list<User *>::iterator it = users_.begin();
 
@@ -30,7 +30,7 @@ bool	UserList::findUser(const std::string &name, const std::string &password)
       std::cout << name << " to " << myuser->getName() << std::endl;
       std::cout << password << " to " << myuser->getPassword() << std::endl;
       if (name.compare(myuser->getName()) == 0 && password.compare(myuser->getPassword()) == 0)
-		return true;
+		return myuser;
     }
-  return false;
+  return NULL;
 }
