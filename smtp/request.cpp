@@ -6,6 +6,7 @@ Request::Request() : cmd_(""), args_("")
 }
 void			Request::setCmd(std::string cmd)
 {
+  std::transform(cmd.begin(), cmd.end(), cmd.begin(), ::toupper);
   this->cmd_ = cmd;
 }
 

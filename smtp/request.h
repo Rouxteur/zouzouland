@@ -1,6 +1,7 @@
 #ifndef REQUEST_H
 #define REQUEST_H
 #include <string>
+#include <algorithm>
 
 class Request
 {

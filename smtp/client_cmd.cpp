@@ -30,14 +30,12 @@ void Client::commandMail(const std::string &arg)
 void Client::commandRcpt(const std::string &arg)
 {
   std::string myarg(arg.c_str());
-  //if (myarg.size() > 10)
-  //myarg = myarg.substr(7, myarg.size() - 7);
-  unsigned int sep = myarg.find("@richar-r.mendoza.epitech.eu");
-  std::cout << myarg << std::endl;
+  unsigned int sep = myarg.find("@bigzou.mooo.com");
+  //std::cout << myarg << std::endl;
   if (sep != std::string::npos && sep > 4)
     {
       myarg = myarg.substr(4, myarg.size() - (myarg.size() - sep) - 4);
-      std::cout << myarg << std::endl;
+      //std::cout << myarg << std::endl;
       if (this->server_.getUserList().findUser(myarg))
 	{
 	  this->mail_.setTo(myarg);
