@@ -60,7 +60,7 @@ void Client::commandRcpt(const std::string &arg)
 
 void Client::commandData(const std::string &arg)
 { 
-  if (arg.compare("\n") == 0)
+1  if (arg.compare("\n") == 0)
     {
       this->response_.setCode("354");
       this->response_.setText("Enter mail, end with . on a line by itself");
@@ -80,5 +80,6 @@ void Client::commandQuit(const std::string &arg)
   this->mail_.save();
   this->response_.setCode("221");
   this->response_.setText("2.0.0 Bye");
+  this->decoOrder_ = true;
   this->request_.resetRequest();
 }
