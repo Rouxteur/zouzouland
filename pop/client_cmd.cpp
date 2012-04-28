@@ -29,8 +29,9 @@ void Client::commandApop(const std::string &arg)
   if (sep != std::string::npos && sep > 1)
     {
 		std::string uname(myarg.substr(0, sep));
-		std::string upass(myarg.substr(sep, myarg.size() - sep));
-      if (this->server_.getUserList().findUser(uname, upass))
+		std::string upass(myarg.substr(sep + 1, 32));
+		//upass[upass.size() - 1] = 0;
+		if (this->server_.getUserList().findUser(uname, upass))
 		{
 			user_.setName(uname);
 			user_.setPassword(upass);
