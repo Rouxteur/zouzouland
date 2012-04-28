@@ -15,7 +15,7 @@
 # endif // _WIN32
 
 const int maxClient = 1024;
-const int port = 21025;
+const int port = 10025;
 
 #include "client.h"
 #include "userlist.h"
