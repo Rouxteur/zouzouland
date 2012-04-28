@@ -60,7 +60,7 @@ void Client::commandRcpt(const std::string &arg)
 
 void Client::commandData(const std::string &arg)
 { 
-1  if (arg.compare("\n") == 0)
+  if (arg.compare("\n") == 0)
     {
       this->response_.setCode("354");
       this->response_.setText("Enter mail, end with . on a line by itself");
