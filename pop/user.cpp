@@ -1,10 +1,14 @@
 #include "user.h"
 
-User::User() : name_("")
+User::User() : name_(""), password_("")
 {
 }
 
 User::User(const std::string &name) : name_(name)
+{
+}
+
+User::User(const std::string &name, const std::string &password) : name_(name), password_(password)
 {
 }
 
