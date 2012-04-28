@@ -27,6 +27,8 @@ bool	UserList::findUser(const std::string &name, const std::string &password)
 	  it != users_.end(); it++ )
     {
       User *myuser = *it;
+      std::cout << name << " to " << myuser->getName() << std::endl;
+      std::cout << password << " to " << myuser->getPassword() << std::endl;
       if (name.compare(myuser->getName()) == 0 && password.compare(myuser->getPassword()) == 0)
 		return true;
     }
