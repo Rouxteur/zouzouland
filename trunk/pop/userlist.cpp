@@ -3,8 +3,8 @@
 
 UserList::UserList()
 {
-  User *user1 = new User("bob");
-  User *user2 = new User("joe");
+  User *user1 = new User("bob", "9f9d51bc70ef21ca5c14f307980a29d8"); // bob : bob
+  User *user2 = new User("joe", "8ff32489f92f33416694be8fdc2d4c22"); // joe : joe
   users_.push_front(user1);
   users_.push_front(user2);
 }

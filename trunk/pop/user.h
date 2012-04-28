@@ -7,6 +7,8 @@ class User
  public:
   User();
   User(const std::string &);
+  User(const std::string &, const std::string &);
+
   ~User();
   const std::string	&getName() const;
   void			setName(const std::string &);
