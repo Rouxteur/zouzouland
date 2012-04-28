@@ -71,5 +71,6 @@ void Client::commandQuit(const std::string &arg)
 {
   this->response_.setCode("+Ok");
   this->response_.setText("QUIT");
+  this->decoOrder_ = true;
   this->request_.resetRequest();
 }
