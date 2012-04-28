@@ -27,6 +27,7 @@ void Client::read()
     {
         readBuff[len] = 0;
 	std::string line(readBuff);
+	std::cout << line << std::endl;
 	this->parser_.parseCmd(line);
 	if (this->parser_.isComplete() == true)
 	  {
