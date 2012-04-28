@@ -6,6 +6,7 @@
 Client::Client(Server& server, Socket* socket) :
         server_(server),
         socket_(socket),
+	user_(NULL),
 	request_(parser_.getRequest()),
 	writeOrder_(true),
         decoOrder_(false)
