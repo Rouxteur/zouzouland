@@ -6,7 +6,7 @@
 # ifdef _WIN32
 const std::string path("D:/mails");
 # else
-const std::string path("/home/richar_r/mendoza-2013-richar_r/mails");
+const std::string path("../mails");
 # endif // _WIN32
 
 class Mail
