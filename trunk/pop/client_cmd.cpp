@@ -78,16 +78,19 @@ void Client::commandApop(const std::string &arg)
 	  std::string vals(this->MailsInfo(uname));
 	  std::istringstream ss(vals);
 	  std::string s;
-	  std::string txt;
+	  std::string txt(uname);
 
-	  txt.append("'s mailbox has ");
+	  
+	  txt += "'s mailbox has ";
 	  ss >> s;
 	  txt.append(s);
-	  txt.append(" messages (");
+	  txt += " messages (";
 	  ss >> s;
-	  txt.append(s);
-	  txt.append(" octets )");
-
+	  txt += s;
+	  txt += " octets)";
+	  
+	  std::cout << "yoo mama  |" << txt << std::endl;
+	  this->response_.setCode("+Ok");
 	  this->response_.setText(txt);
 	  this->request_.resetRequest();
       	}

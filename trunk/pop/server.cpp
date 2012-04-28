@@ -95,7 +95,6 @@ void		Server::unbuildPoll()
 
 void		Server::watchPoll()
 {
-	std::cout << "bip" << std::endl;
     if (ABSPOLL(this->pollTable_, this->iPoll_, -1) < 0)
         std::cerr << "poll err" << std::endl;
 }
